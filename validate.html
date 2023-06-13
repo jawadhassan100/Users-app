@@ -18,39 +18,62 @@
     </nav>
     <main class="container text-center  my-3 ">
         <a class="btn btn-warning w-25 border-darkf fw-bolder fst-italic " href="./index.html" role="button">
-            <h3>Home</h3>
+            <h3 class="fw-bold">Home</h3>
         </a>
     </main>
     <br><br>
     <main class="container w-50">
         <form id="validForm">
             <div class="mb-3 ">
-                <label for="addTodo" class="form-label text-light">Enter Name</label>
-                <input type="text" class="form-control form-control-lg" id="addTodo" placeholder="Full Name" name="fName" required>
-                <!-- <div class="alert alert-danger mt-2" id="error-msg"> -->
+                <label for="addTodo" class="form-label text-light">Email</label>
+                <input type="email" class="form-control form-control-lg" id="addTodo" placeholder="example@gmail.com" name="email" required>
+                  <div class="alert alert-danger mt-2" id="error-msg-email"></div>
+            </div>
                 </div>
                 <br>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label text-light">Password</label>
                     <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="*********"
-                        name="Pwsd" required>
+                        name="password" required>
+                         <div class="alert alert-danger mt-2" id="error-msg-password"></div>
+                </div>
                 </div>
                 <br>
                 <button type="submit" class="btn btn-warning fw-bolder" id="clear">Submit</button>
                 </form>
-    </main>
-    <div class="toast-container top-0 start-50 translate-middle-x p-3">
-        <div id="ShowToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <!-- <main class="container w-25">
+<div class="alert alert-success mt-2" id="validate-msg">
+    </main>  -->
+   
+     <div class="toast-container top-0 start-50 translate-middle-x p-3">
+        <div id="ValidateToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <strong class="me-auto">Notification</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
-                user exist in ls
+                User Exist In Local Storage!
             </div>
         </div>
-    </div>
-    <script src="./script.js"></script>
+    </div> 
+    </main>
+    <br><br>
+    <main class="container w-50">
+ <table class="table table-bordered table-dark" id="table">
+  <thead class="border-3 border-dark">
+    <tr >
+      <!-- <th scope="col" class="bg-warning text-dark fst-italic "><h5 class="fw-bolder">#</h5></th> -->
+      <!-- <th scope="col"class="bg-warning text-dark fst-italic"><h5 class="fw-bolder">Name</h5></th> -->
+      <th scope="col"class="bg-warning text-dark fst-italic"><h5 class="fw-bolder">Email</h5></th>
+      <th scope="col"class="bg-warning text-dark fst-italic"><h5 class="fw-bolder">Password</h5></th>
+    </tr>
+  </thead>
+  <tbody class="border-3 border-warning">
+    
+  </tbody>
+</table>
+</main>
     <script src="./vendor/css/js/bootstrap.js"></script>
+    <script src="./validate.js"></script>
 </body>
 </html>
